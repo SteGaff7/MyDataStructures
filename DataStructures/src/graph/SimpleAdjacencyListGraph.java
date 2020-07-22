@@ -105,8 +105,29 @@ public class SimpleAdjacencyListGraph {
 		return bfs;
 	}
 	
-	public List<Integer> DFS(int v) {
+	public List<Integer> DFSStack(int v) {
 		List<Integer> dfs = new ArrayList<Integer>();
+		HashMap<Integer, Boolean> visited = new HashMap<Integer, Boolean>(size());
+		LinkedList<Integer> stack = new LinkedList<Integer>();
+		
+		stack.add(v);
+		
+		while (stack.size() != 0) {
+			
+			int node = stack.removeLast();
+			
+			if (! visited.getOrDefault(node, false)) {
+				visited.put(node, true);
+				dfs.add(node);
+				Iterator<Integer> it = getVertex(node).listIterator();
+				while (it.hasNext()) {
+					int a = it.next();
+					if (! visited.getOrDefault(a, false)) {
+						stack.addLast(a);
+					}
+				}
+			}
+		}
 		
 		return dfs;
 	}
@@ -130,6 +151,6 @@ public class SimpleAdjacencyListGraph {
 		g.addEdge(3, 6);
 		g.addEdge(4, 6);		
 		
-		System.out.println(g.BFSQueue(1));
+		System.out.println(g.DFSStack(1));
 	}
 }
