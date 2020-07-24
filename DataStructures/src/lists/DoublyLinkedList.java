@@ -1,11 +1,11 @@
-package all_my_data_structures;
+package lists;
 
-public class LinkedListDoubly {
+public class DoublyLinkedList {
 	
 	private int size; 
 	private DNode header, trailer;
 	
-	public LinkedListDoubly() {
+	public DoublyLinkedList() {
 		size = 0;
 		header = new DNode(null, null, null);
 		trailer = new DNode(null, header, null);

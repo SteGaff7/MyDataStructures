@@ -1,10 +1,12 @@
 package all_my_data_structures;
 
+import lists.SinglyLinkedList;
+
 public class QueueSList {
-	private LinkedListSingly queue;
+	private SinglyLinkedList queue;
 	
 	public QueueSList() {
-		queue = new LinkedListSingly();
+		queue = new SinglyLinkedList();
 	}
 	
 	public int size() {

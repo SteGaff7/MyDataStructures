@@ -1,4 +1,4 @@
-package all_my_data_structures;
+package lists;
 
 public class SNode {
 	

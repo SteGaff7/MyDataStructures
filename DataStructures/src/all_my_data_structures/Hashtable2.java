@@ -1,17 +1,20 @@
 package all_my_data_structures;
 
+import lists.DoublyLinkedList;
+import lists.ListArrayImplementation;
+
 public class Hashtable2 {
 	private int size;
 	private int maxSize;
-	private ListArrayImplementation<LinkedListDoubly> array;
+	private ListArrayImplementation<DoublyLinkedList> array;
 	
 	public Hashtable2() {
-		this.array = new ListArrayImplementation<LinkedListDoubly>();
+		this.array = new ListArrayImplementation<DoublyLinkedList>();
 		this.maxSize =array.maxSize();
 		this.size = 0;
 		
 		for (int i=0; i<maxSize; i++) {
-			array.insert(new LinkedListDoubly(), i);
+			array.insert(new DoublyLinkedList(), i);
 		}
 	}
 	

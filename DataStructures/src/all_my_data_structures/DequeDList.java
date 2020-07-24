@@ -1,10 +1,12 @@
 package all_my_data_structures;
 
+import lists.DoublyLinkedList;
+
 public class DequeDList {
-	private LinkedListDoubly deque;
+	private DoublyLinkedList deque;
 	
 	public DequeDList() {
-		deque = new LinkedListDoubly();
+		deque = new DoublyLinkedList();
 	}
 	
 	public int size() {

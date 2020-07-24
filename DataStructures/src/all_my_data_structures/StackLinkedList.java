@@ -1,5 +1,7 @@
 package all_my_data_structures;
 
+import lists.SNode;
+
 public class StackLinkedList {
 	private SNode head;
 	private int size;

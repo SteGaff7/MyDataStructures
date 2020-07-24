@@ -1,10 +1,12 @@
 package all_my_data_structures;
 
+import lists.SinglyLinkedList;
+
 public class StackLinkedList2 {
-	private LinkedListSingly sList;
+	private SinglyLinkedList sList;
 	
 	public StackLinkedList2() {
-		sList = new LinkedListSingly();
+		sList = new SinglyLinkedList();
 	}
 	
 	public void push(Object e) {

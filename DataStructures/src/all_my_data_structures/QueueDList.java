@@ -1,10 +1,12 @@
 package all_my_data_structures;
 
+import lists.DoublyLinkedList;
+
 public class QueueDList {
-	private LinkedListDoubly queue;
+	private DoublyLinkedList queue;
 	
 	public QueueDList() {
-		queue = new LinkedListDoubly();
+		queue = new DoublyLinkedList();
 	}
 	
 	public int size() {

@@ -1,9 +1,12 @@
 package all_my_data_structures;
 
+import lists.DNode;
+import lists.DoublyLinkedList;
+
 public class Hashtable {
 	private int capacity;
 	private int size;
-	private VectorExtendableArray<LinkedListDoubly> array;
+	private VectorExtendableArray<DoublyLinkedList> array;
 	
 	public int size() {
 		return size;
@@ -14,18 +17,18 @@ public class Hashtable {
 	}
 	
 	public Hashtable() {
-		array = new VectorExtendableArray<LinkedListDoubly>();
+		array = new VectorExtendableArray<DoublyLinkedList>();
 		size = 0;
 		capacity = array.capacity();
 		
 		for (int i=0; i < capacity; i++) {
-			array.insertAtRank(i, new LinkedListDoubly());
+			array.insertAtRank(i, new DoublyLinkedList());
 		}
 	}
 	
 	public String printLinkedList(Object k) {
 		int hash = k.hashCode() % capacity;
-		LinkedListDoubly linkedList = array.elemAtRank(hash);
+		DoublyLinkedList linkedList = array.elemAtRank(hash);
 		return linkedList.toString();
 	}
 	
@@ -36,7 +39,7 @@ public class Hashtable {
 		int hash = k.hashCode() % capacity;
 		Entry entry = new Entry(k, v);
 		
-		LinkedListDoubly linkedList = array.elemAtRank(hash);
+		DoublyLinkedList linkedList = array.elemAtRank(hash);
 		
 		try  {
 			DNode node = linkedList.first();
@@ -63,7 +66,7 @@ public class Hashtable {
 	
 	public Object get(Object k) {
 		int hash = k.hashCode() % capacity;
-		LinkedListDoubly linkedList = array.elemAtRank(hash);
+		DoublyLinkedList linkedList = array.elemAtRank(hash);
 		
 		try  {
 			DNode node = linkedList.first();
@@ -87,7 +90,7 @@ public class Hashtable {
 	
 	public Object remove(Object k) {
 		int hash = k.hashCode() % capacity;
-		LinkedListDoubly linkedList = array.elemAtRank(hash);
+		DoublyLinkedList linkedList = array.elemAtRank(hash);
 		
 		try  {
 			DNode node = linkedList.first();
@@ -121,7 +124,7 @@ public class Hashtable {
 		
 		int counter = 0;
 		for(int i=0; i<capacity; i++) {
-			LinkedListDoubly linkedList = array.elemAtRank(i);
+			DoublyLinkedList linkedList = array.elemAtRank(i);
 			
 			if (! linkedList.isEmpty()) {
 				DNode node = linkedList.first();
@@ -143,7 +146,7 @@ public class Hashtable {
 		
 		int counter = 0;
 		for(int i=0; i<capacity; i++) {
-			LinkedListDoubly linkedList = array.elemAtRank(i);
+			DoublyLinkedList linkedList = array.elemAtRank(i);
 			
 			if (! linkedList.isEmpty()) {
 				DNode node = linkedList.first();
@@ -166,7 +169,7 @@ public class Hashtable {
 		
 		int counter = 0;
 		for(int i=0; i<capacity; i++) {
-			LinkedListDoubly linkedList = array.elemAtRank(i);
+			DoublyLinkedList linkedList = array.elemAtRank(i);
 			
 			if (! linkedList.isEmpty()) {
 				DNode node = linkedList.first();

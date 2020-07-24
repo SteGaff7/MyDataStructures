@@ -1,13 +1,13 @@
-package all_my_data_structures;
+package lists;
 
 // Add tail functionality
-public class LinkedListSingly {
+public class SinglyLinkedList {
 	
 	private int size;
 	private SNode head;
 //	private SNode tail;
 	
-	public LinkedListSingly() {
+	public SinglyLinkedList() {
 		size = 0;
 		head = null;
 //		tail = null;
